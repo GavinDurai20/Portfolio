@@ -10,9 +10,9 @@ const Hero = () => {
     >
       <div className="max-w-3xl space-y-6">
         {/* Intro Label */}
-        <p className="text-sm font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400">
-          Hello, I’m 
-        </p>
+<p className="text-sm font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400">
+  Hello, I&apos;m 
+</p>
 
         {/* Name */}
         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight">
@@ -25,12 +25,12 @@ const Hero = () => {
         </h2>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-          I craft clean, scalable, and user-focused web applications,
-          blending intuitive user interfaces with robust backend systems.
-          I'm eager to join a team where I can contribute meaningfully while
-          growing as a developer.
-        </p>
+<p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+  I craft clean, scalable, and user-focused web applications,
+  blending intuitive user interfaces with robust backend systems.
+  I&apos;m eager to join a team where I can contribute meaningfully while
+  growing as a developer.
+</p>
 
         {/* Call to Actions */}
         <div className="flex flex-wrap gap-4 pt-4">

@@ -32,10 +32,10 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">
             👋 About Me
           </h2>
-          <p className="text-base md:text-lg leading-relaxed">
-            Hi, I'm <span className="text-[#3b82f6] dark:text-[#60a5fa] font-semibold">Gavin Durai</span>,
-            a computer science graduate and aspiring full-stack developer passionate about building impactful digital solutions.
-          </p>
+<p className="text-base md:text-lg leading-relaxed">
+  Hi, I&apos;m <span className="text-[#3b82f6] dark:text-[#60a5fa] font-semibold">Gavin Durai</span>,
+  a computer science graduate and aspiring full-stack developer passionate about building impactful digital solutions.
+</p>
           <p className="text-base md:text-lg leading-relaxed">
 I enjoy writing clean, scalable code, creating intuitive user interfaces, and learning new technologies to strengthen my development skills. As a fresher, I am eager to contribute to innovative teams while continuously growing through real-world projects and collaborative environments.
           </p>
