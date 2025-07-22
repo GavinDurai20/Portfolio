@@ -3,7 +3,7 @@ import React from "react";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "SQL", "HTML", "CSS"],
+    skills: ["JavaScript", "Python", "SQL"],
   },
   {
     title: "Frontend",
@@ -15,7 +15,7 @@ const skillCategories = [
   },
   {
     title: "Databases & Tools",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Git", "GitHub"],
+    skills: ["PostgreSQL", "MySQL", "Git", "GitHub"],
   },
 ];
 
