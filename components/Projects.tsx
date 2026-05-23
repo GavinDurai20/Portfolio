@@ -1,34 +1,58 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import { Layers3 } from "lucide-react";
 
 const projects = [
   {
-    title: "AI Medical Voice Agent",
-    tagline: "Voice-Powered Virtual Healthcare",
+    title: "Telecom Customer Churn Prediction",
+    tagline: "Machine Learning & Data Analytics",
     description:
-      "Built a real-time AI medical voice assistant using Next.js, React, TypeScript, AssemblyAI, Clerk, and Neon DB to capture patient symptoms via voice for improved healthcare accessibility. Integrated secure authentication, automated medical report generation, and subscription workflows for scalable virtual consultations.",
-    tech: ["Next.js", "React", "TypeScript", "AssemblyAI", "Clerk", "Neon DB"],
+      "Analyzed 7,000+ telecom customer records to identify customer churn patterns and retention trends. Built a Logistic Regression model using Scikit-learn achieving around 79% accuracy and performed detailed exploratory data analysis to uncover business insights.",
+    tech: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+    ],
+    github: "https://github.com/GavinDurai20/Customer-churn-prediction",
+    link: "#",
+  },
+  {
+    title: "DocTalk AI",
+    tagline: "Real-Time AI Medical Voice Assistant",
+    description:
+      "Developed an AI-powered medical voice assistant where users can describe symptoms through voice and receive real-time AI-generated responses. Integrated AssemblyAI for speech-to-text, Clerk authentication, and Neon PostgreSQL for secure medical history storage.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "AssemblyAI",
+      "Clerk",
+      "Neon PostgreSQL",
+      "Tailwind CSS",
+    ],
     github: "https://github.com/GavinDurai20/DocTalk-AI",
     link: "https://doc-talk-ai-lovat.vercel.app",
   },
   {
-    title: "Bolt.New Clone",
-    tagline: "AI React Code Generator",
+    title: "Power BI Sales Dashboard",
+    tagline: "Business Intelligence & Visualization",
     description:
-      "SaaS app that generates React.js code from AI prompts using Gemini AI and Convex, with real-time code generation and export support.",
-    tech: ["Next.js", "React", "Tailwind", "Convex", "Gemini AI"],
-    github: "https://github.com/GavinDurai20/bolt.new",
-    link: "https://bolt-new-olive.vercel.app/",
-  },
-  {
-    title: "Tic Tac Toe Multiplayer",
-    tagline: "Real-Time Game with Matchmaking",
-    description:
-      "Multiplayer Tic Tac Toe game using WebSockets, React state management, Node.js backend, and Tailwind for styling.",
-    tech: ["React", "Node.js", "Socket.IO", "Tailwind CSS"],
-    github: "https://github.com/GavinDurai20/Tic-Tac-TOE",
-    link: "https://tic-tac-toe-sigma-one-60.vercel.app",
+      "Created an interactive Power BI dashboard to analyze sales performance, revenue trends, and customer insights. Built dynamic visualizations, KPI tracking, and automated reporting features for better business decision-making.",
+    tech: [
+      "Power BI",
+      "SQL",
+      "Excel",
+      "Data Visualization",
+      "DAX",
+    ],
+    github: "https://github.com/GavinDurai20",
+    link: "#",
   },
 ];
 
@@ -36,36 +60,65 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-white dark:bg-[#0f172a] px-6 md:px-16 py-20 font-sans"
+      className="relative overflow-hidden bg-[#020617] px-6 md:px-20 lg:px-32 py-28"
     >
-      <div className="max-w-5xl mx-auto">
-<h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
-  🧱 Projects I&apos;ve Built
-</h2>
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-blue-500/20 blur-3xl rounded-full" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/20 blur-3xl rounded-full" />
 
+      <div className="relative max-w-7xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md text-sm text-slate-300 mb-6">
+            <Layers3 size={16} className="text-blue-400" />
+            Featured Projects
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+            Data & AI
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              {" "}Projects
+            </span>
+          </h2>
+
+          <p className="text-slate-400 mt-6 max-w-2xl mx-auto text-lg">
+            Real-world projects focused on machine learning, data analytics,
+            business intelligence, and AI-powered applications.
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white dark:bg-[#1e293b] rounded-lg p-6 flex flex-col justify-between shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 duration-300 border border-gray-200 dark:border-gray-700"
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group rounded-[2rem] bg-white/5 backdrop-blur-2xl p-7 border border-white/10 hover:border-blue-500/30 hover:bg-white/[0.07] transition-all duration-300"
             >
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-                  {project.tagline}
-                </p>
-                <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">
+              {/* Top Content */}
+              <div className="space-y-5">
+                <div>
+                  <p className="text-blue-400 text-sm font-medium mb-2">
+                    {project.tagline}
+                  </p>
+
+                  <h3 className="text-2xl font-bold text-white">
+                    {project.title}
+                  </h3>
+                </div>
+
+                <p className="text-slate-400 leading-relaxed text-base">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 pt-2">
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
+                      className="px-3 py-1.5 rounded-full bg-[#0f172a] text-slate-300 text-xs border border-white/10 hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300"
                     >
                       {tech}
                     </span>
@@ -73,27 +126,31 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="flex gap-3 mt-4">
+              {/* Buttons */}
+              <div className="flex gap-4 mt-8 flex-wrap">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white transition-all duration-300"
                 >
-                  <FaGithub />
+                  <FaGithub size={18} />
                   GitHub
                 </a>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-2 px-3 py-1 text-sm border border-blue-500 rounded text-blue-600 hover:bg-blue-50 transition"
-                >
-                  <FiExternalLink />
-                  Live Demo
-                </a>
+
+                {project.link !== "#" && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/20"
+                  >
+                    <FiExternalLink size={18} />
+                    Live Demo
+                  </a>
+                )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
