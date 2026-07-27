@@ -2,83 +2,134 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, FileText } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+
+const navLinks = [
+  { number: "01.", label: "About", href: "#about" },
+  { number: "02.", label: "Experience", href: "#experience" },
+  { number: "03.", label: "Work", href: "#projects" },
+  { number: "04.", label: "Contact", href: "#contact" },
+];
+
+const socials = [
+  { icon: <Github size={20} />, href: "https://github.com/GavinDurai20" },
+  { icon: <Linkedin size={20} />, href: "https://linkedin.com/in/gavin-durai/" },
+  { icon: <Mail size={20} />, href: "mailto:gavinnadar20@gmail.com" },
+];
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="scroll-mt-24 relative overflow-hidden min-h-screen flex items-center bg-[#020617] px-6 md:px-20 lg:px-32 py-24"
-    >
-      {/* Background Glow */}
-      <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-blue-500/20 blur-3xl rounded-full" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/20 blur-3xl rounded-full" />
+    <section className="relative min-h-screen bg-[#274472] overflow-hidden">
+      {/* NAVBAR — sits close to the edges */}
+      <nav className="relative z-20 flex items-center justify-between px-6 md:px-10 py-8">
+        <a
+          href="#home"
+          className="w-14 h-14 flex items-center justify-center rounded-2xl border-2 border-[#c38d94] text-[#c38d94] text-xl font-bold font-mono"
+        >
+          G
+        </a>
 
-      <motion.div
-        initial={{ opacity: 0, y: 35 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="relative max-w-5xl"
-      >
-        {/* Intro */}
-        <p className="text-sm uppercase tracking-[0.25em] text-blue-400 font-medium mb-5">
-          Hello, I&apos;m
-        </p>
-
-        {/* Heading */}
-        <div className="space-y-3">
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-            Gavin{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Durai
-            </span>
-          </h1>
-
-          {/* Roles */}
-          <div className="space-y-2">
-            <h2 className="text-2xl md:text-4xl font-semibold text-slate-200">
-              Data Analyst & ML Enthusiast
-            </h2>
-
-            <p className="text-lg md:text-xl text-slate-400">
-              Computer Science Graduate
-            </p>
-          </div>
+        <div className="hidden md:flex items-center gap-16 lg:gap-24">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="font-mono text-sm text-slate-200 hover:text-[#c38d94] transition-colors duration-300"
+            >
+              <span className="text-[#c38d94]">{link.number}</span> {link.label}
+            </a>
+          ))}
         </div>
 
-        {/* Description */}
-        <p className="mt-8 text-lg md:text-xl leading-relaxed text-slate-400 max-w-3xl">
-          Passionate about working with data, building dashboards, and creating
-          meaningful insights using SQL, Python, Power BI, and visualization
-          tools. I enjoy solving real-world problems through analytics and
-          machine learning-driven solutions.
-        </p>
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2.5 rounded-md border border-[#c38d94] text-[#c38d94] font-mono text-sm hover:bg-[#c38d94]/10 transition-colors duration-300"
+        >
+          Resume
+        </a>
+      </nav>
 
-        {/* Buttons */}
-        <div className="flex flex-wrap gap-4 mt-10">
+      {/* LEFT SOCIAL RAIL */}
+      <div className="hidden lg:block fixed left-6 md:left-20 top-0 bottom-0 z-20">
+        <div className="absolute top-[60vh] left-1/2 -translate-x-1/2 flex flex-col items-center gap-7">
+          {socials.map((social, idx) => (
+            <a
+              key={idx}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-200 hover:text-[#c38d94] hover:-translate-y-1 transition-all duration-300"
+            >
+              {social.icon}
+            </a>
+          ))}
+        </div>
+        <div className="absolute left-1/2 -translate-x-1/2 top-[86vh] bottom-0 w-px bg-slate-300" />
+      </div>
+
+      {/* RIGHT EMAIL RAIL — same top-[57vh] content start and same top-[86vh] line start as the left rail, so both match exactly */}
+      <div className="hidden lg:block fixed right-6 md:right-20 top-0 bottom-0 z-20">
+        <a
+          href="mailto:gavinnadar20@gmail.com"
+          className="absolute top-[50vh] left-1/2 -translate-x-1/2 font-mono text-sm tracking-widest text-slate-200 hover:text-[#c38d94] transition-colors duration-300"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          gavinnadar20@gmail.com
+        </a>
+        <div className="absolute left-1/2 -translate-x-1/2 top-[86vh] bottom-0 w-px bg-slate-300" />
+      </div>
+
+      {/* MAIN CONTENT — indented further than the nav, matching the padding used across the rest of the site */}
+      <div className="relative z-10 max-w-5xl px-6 md:px-20 lg:px-32 pt-16 md:pt-28 md:left-20">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="font-mono text-[#c38d94] text-lg mb-4"
+        >
+          Hi my name is
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-5xl md:text-8xl font-bold text-[#fdf2f8] leading-[1.1]"
+        >
+          Gavin Durai.
+        </motion.h1>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-5xl md:text-6xl font-bold text-[#adacb5] leading-[1.1] mt-4"
+        >
+          Code. Build. Solve.
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-8 max-w-xl text-lg text-[#adacb5] leading-relaxed"
+        >
+          I&apos;m a Computer Science graduate with a foundation in Java,
+          Python, and JavaScript. My current focus is on building full-stack
+          applications with React and Node.js. Currently working as part of the Desktop Support team at{" "}
           <a
-            href="#projects"
-            className="group inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/20"
-          >
-            View Projects
-
-            <ArrowRight
-              size={18}
-              className="group-hover:translate-x-1 transition-transform"
-            />
-          </a>
-
-          <a
-            href="/Resume.pdf"
+            href="https://www.wns.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-slate-200 font-medium hover:bg-white/10 transition-all duration-300"
+            className="text-[#c38d94] hover:underline"
           >
-            <FileText size={18} />
-            Resume
+            Insiza Technology
           </a>
-        </div>
-      </motion.div>
+          .
+        </motion.p>
+      </div>
     </section>
   );
 };
