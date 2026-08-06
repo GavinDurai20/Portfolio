@@ -21,7 +21,7 @@ const experience = {
 };
 
 const Experience = () => {
-  const cardRef = useRef(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   const [spotlight, setSpotlight] = useState({ x: 50, y: 50 });
   const [isHovering, setIsHovering] = useState(false);
 
@@ -30,15 +30,18 @@ const Experience = () => {
   const springX = useSpring(rotateX, { stiffness: 150, damping: 15 });
   const springY = useSpring(rotateY, { stiffness: 150, damping: 15 });
 
-  const handleMouseMove = (e) => {
-    const rect = cardRef.current.getBoundingClientRect();
-    const px = (e.clientX - rect.left) / rect.width;
-    const py = (e.clientY - rect.top) / rect.height;
+const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  if (!cardRef.current) return;
 
-    rotateY.set((px - 0.5) * 8);
-    rotateX.set((0.5 - py) * 8);
-    setSpotlight({ x: px * 100, y: py * 100 });
-  };
+  const rect = cardRef.current.getBoundingClientRect();
+
+  const px = (e.clientX - rect.left) / rect.width;
+  const py = (e.clientY - rect.top) / rect.height;
+
+  rotateY.set((px - 0.5) * 8);
+  rotateX.set((0.5 - py) * 8);
+  setSpotlight({ x: px * 100, y: py * 100 });
+};
 
   const handleMouseEnter = () => setIsHovering(true);
   const handleMouseLeave = () => {
