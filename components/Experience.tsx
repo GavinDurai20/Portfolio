@@ -50,7 +50,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="scroll-mt-24 relative overflow-hidden bg-[#274472] px-6 md:px-20 lg:px-32 py-28"
+      className="scroll-mt-24 relative overflow-hidden bg-[#274472] px-6 md:px-20 lg:px-32 pt-4 md:pt-6 pb-28"
     >
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-[420px] h-[420px] bg-[#c38d94]/10 blur-3xl rounded-full" />
@@ -101,9 +101,8 @@ const Experience = () => {
             <span className="w-2.5 h-2.5 rounded-full bg-red-400/70" />
             <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
             <span className="w-2.5 h-2.5 rounded-full bg-green-400/70" />
-            
             <span className="ml-3 font-mono text-xs text-slate-400">
-             
+              experience.log
             </span>
           </div>
 

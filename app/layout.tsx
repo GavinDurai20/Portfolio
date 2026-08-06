@@ -1,5 +1,5 @@
 import "./globals.css";
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Portfolio | Gavin Durai",
@@ -13,8 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-black">
-        
+      <body className="bg-[#274472] text-white">
+        <Navbar />
         {children}
       </body>
     </html>

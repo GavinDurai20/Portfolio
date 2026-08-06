@@ -30,12 +30,12 @@ const skillCategories = [
   {
     title: "Databases",
     icon: <Database size={18} />,
-    skills: ["PostgreSQL", "MongoDB"],
+    skills: ["PostgreSQL", "MySQL"],
   },
   {
     title: "Tools",
     icon: <Terminal size={18} />,
-    skills: ["Docker", "Git", "GitHub", "Vercel", "Render"],
+    skills: ["Docker", "GitHub Copilot", "Git", "GitHub", "Vercel", "Render"],
   },
 ];
 
@@ -43,7 +43,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="scroll-mt-24 relative overflow-hidden bg-[#274472] px-6 md:px-20 lg:px-32 py-28"
+      className="scroll-mt-24 relative overflow-hidden bg-[#274472] px-6 md:px-20 lg:px-32 pt-4 md:pt-6 pb-28"
     >
       {/* Background Glow — navy/coral theme, matching the rest of the site */}
       <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-[#c38d94]/10 blur-3xl rounded-full" />
@@ -143,4 +143,3 @@ const About = () => {
 };
 
 export default About;
-

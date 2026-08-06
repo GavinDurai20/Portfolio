@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
@@ -25,7 +24,7 @@ const projects = [
     github: "https://github.com/GavinDurai20/bolt.new",
     link: "https://bolt-new-olive.vercel.app/",
   },
-    {
+  {
     title: "Tic-Tac-Toe",
     tagline: "Real-Time Multiplayer Game",
     description:
@@ -40,7 +39,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-[#274472] px-6 md:px-20 lg:px-20 py-28"
+      className="scroll-mt-24 relative overflow-hidden bg-[#274472] px-6 md:px-20 lg:px-32 pt-10 md:pt-14 pb-28"
     >
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-[#c38d94]/10 blur-3xl rounded-full" />
@@ -53,12 +52,10 @@ const Projects = () => {
             <Layers3 size={16} className="text-[#c38d94]" />
             Featured Projects
           </div>
-
           <h2 className="text-4xl md:text-6xl font-bold text-[#fdf2f8] leading-tight">
             Things I&apos;ve
             <span className="text-[#c38d94]"> Built.</span>
           </h2>
-
           <p className="text-[#adacb5] mt-6 max-w-2xl text-lg">
             A couple of full-stack builds where I worked through real-time
             sync, auth, and data — end to end.
@@ -67,9 +64,7 @@ const Projects = () => {
 
         {/* Timeline of Projects */}
         <div className="relative">
-          {/* Connecting vertical line */}
           <div className="absolute left-8 top-8 bottom-8 w-px bg-slate-300/20 hidden md:block" />
-
           <div className="space-y-16">
             {projects.map((project, index) => (
               <motion.div
@@ -80,16 +75,13 @@ const Projects = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="relative flex flex-col md:flex-row gap-6 md:gap-10"
               >
-                {/* Number Marker */}
                 <div className="flex-shrink-0 relative z-10">
                   <div className="w-16 h-16 flex items-center justify-center rounded-2xl border-2 border-[#c38d94] bg-[#274472] text-[#c38d94] font-mono text-lg font-bold">
                     0{index + 1}
                   </div>
                 </div>
 
-                {/* Card */}
                 <div className="group flex-1 rounded-[1.75rem] bg-white/5 backdrop-blur-2xl border border-white/10 hover:border-[#c38d94]/40 hover:bg-white/[0.07] transition-all duration-300 overflow-hidden">
-                  {/* Editor-style top bar */}
                   <div className="flex items-center gap-2 px-5 py-3 border-b border-white/10 bg-black/10">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-400/70" />
                     <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
@@ -113,7 +105,6 @@ const Projects = () => {
                       {project.description}
                     </p>
 
-                    {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2 pt-2">
                       {project.tech.map((tech, i) => (
                         <span
@@ -125,7 +116,6 @@ const Projects = () => {
                       ))}
                     </div>
 
-                    {/* Buttons */}
                     <div className="flex gap-4 flex-wrap pt-3">
                       <a
                         href={project.github}
