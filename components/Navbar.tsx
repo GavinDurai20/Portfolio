@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 
 const navLinks = [
   { number: "01.", label: "About", href: "#about" },
@@ -11,9 +12,9 @@ const navLinks = [
 ];
 
 const socials = [
-  { icon: <Github size={20} />, href: "https://github.com/GavinDurai20" },
-  { icon: <Linkedin size={20} />, href: "https://linkedin.com/in/gavin-durai/" },
-  { icon: <Mail size={20} />, href: "mailto:gavinnadar20@gmail.com" },
+  { icon: <FaGithub size={20} />, href: "https://github.com/GavinDurai20" },
+  { icon: <FaLinkedin size={20} />, href: "https://linkedin.com/in/gavin-durai/" },
+  { icon: <FiMail size={20} />, href: "mailto:gavinnadar20@gmail.com" },
 ];
 
 const Navbar = () => {
