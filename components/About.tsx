@@ -15,27 +15,17 @@ const skillCategories = [
   {
     title: "Languages",
     icon: <Code2 size={18} />,
-    skills: ["Java", "Python", "JavaScript", "SQL"],
+    skills: ["JavaScript","Java", "Python"],
   },
   {
-    title: "Frontend",
+    title: "Web Technologies",
     icon: <Layout size={18} />,
-    skills: ["React", "HTML", "CSS", "Tailwind CSS"],
+    skills: ["React","Tailwind CSS", "Node.js", "Express.js"],
   },
   {
-    title: "Backend",
-    icon: <Server size={18} />,
-    skills: ["Node.js", "Express.js"],
-  },
-  {
-    title: "Databases",
+    title: "Databases & Tools",
     icon: <Database size={18} />,
-    skills: ["PostgreSQL", "MySQL"],
-  },
-  {
-    title: "Tools",
-    icon: <Terminal size={18} />,
-    skills: ["Docker", "GitHub Copilot", "Git", "GitHub", "Vercel", "Render"],
+    skills: ["PostgreSQL", "MongoDB", "Docker", "GitHub Copilot", "Git"],
   },
 ];
 
@@ -79,8 +69,7 @@ const About = () => {
                   {" "}Gavin Durai
                 </span>
                 , a Computer Science graduate with a strong foundation in
-                Java, Python, and JavaScript, and working knowledge of React,
-                Node.js, and database design.
+                JavaScript, Databases, and frontend technologies.
               </p>
 
               <p className="text-[#adacb5]/80 text-lg leading-relaxed">
@@ -88,7 +77,7 @@ const About = () => {
                 Global Services through Insiza Technology, where I handle
                 enterprise IT operations, high-severity incidents, VIP
                 support, and technical issue resolution in fast-paced
-                environments — while pursuing an entry-level Software
+                environments — while looking for an entry-level Software
                 Engineer role.
               </p>
             </div>

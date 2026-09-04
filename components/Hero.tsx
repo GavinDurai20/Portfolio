@@ -44,8 +44,8 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-8 max-w-xl text-lg text-[#adacb5] leading-relaxed"
         >
-          I&apos;m a Computer Science graduate with a foundation in Java,
-          Python, and JavaScript. My current focus is on building full-stack
+          I&apos;m a Computer Science graduate with a foundation in JavaScript,
+          Java and Python. My current focus is on building full-stack
           applications with React and Node.js. Currently working as part of
           the Desktop Support team at{" "}
           <a
