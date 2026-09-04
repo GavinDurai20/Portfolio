@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
 
         <a
-          href="Resume.pdf"
+          href="Gavin - Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2.5 rounded-md border border-[#c38d94] text-[#c38d94] font-mono text-sm hover:bg-[#c38d94]/10 transition-colors duration-300"
