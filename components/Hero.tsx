@@ -7,24 +7,27 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="scroll-mt-24 relative min-h-screen bg-[#274472] overflow-hidden"
+      className="scroll-mt-24 relative min-h-screen flex items-center overflow-hidden bg-[#274472] px-6 md:px-12 lg:px-20 py-24 md:py-32"
     >
-      {/* MAIN CONTENT — matches the px-6 md:px-20 lg:px-32 padding used across every other section */}
-      <div className="relative z-10 max-w-5xl px-6 md:px-20 lg:px-32 pt-28 md:pt-36 lg:pt-40">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-[#c38d94]/10 blur-3xl rounded-full" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#c38d94]/10 blur-3xl rounded-full" />
+
+      <div className="relative mx-auto w-full max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-mono text-[#c38d94] text-lg mb-4"
+          className="text-[#c38d94] text-base md:text-lg font-semibold tracking-wide mb-3"
         >
-          Hi my name is
+          Hi, my name is
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl md:text-8xl font-bold text-[#fdf2f8] leading-[1.1]"
+          className="text-5xl md:text-7xl font-bold text-[#fdf2f8] leading-[1.1]"
         >
           Gavin Durai.
         </motion.h1>
@@ -33,21 +36,22 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-6xl font-bold text-[#adacb5] leading-[1.1] mt-4"
+          className="text-4xl md:text-6xl font-bold text-[#adacb5] leading-[1.1] mt-3"
         >
-          Code. Build. Solve.
+          Learn. Build. Deploy.
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-8 max-w-xl text-lg text-[#adacb5] leading-relaxed"
+          className="mt-6 max-w-xl text-base md:text-lg tracking-wide text-[#adacb5] leading-relaxed"
         >
-          I&apos;m a Computer Science graduate with a foundation in JavaScript,
-          Java and Python. My current focus is on building full-stack
-          applications with React and Node.js. Currently working as part of
-          the Desktop Support team at{" "}
+          I&apos;m a Computer Science graduate looking for an entry-level
+          Cloud / DevOps role. With over a year of hands-on incident response
+          and SLA-driven support behind me, I&apos;m now building skills in
+          Docker, Kubernetes, Git and Python. Currently part of the Desktop
+          Support team at{" "}
           <a
             href="https://www.wns.com"
             target="_blank"
